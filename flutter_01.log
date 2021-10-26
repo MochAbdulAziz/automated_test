@@ -1,0 +1,74 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter pub get
+
+## exception
+
+ArgumentError: Invalid argument(s): Cannot find executable for /Users/neuron-nb127/development/flutter/bin/cache/dart-sdk/bin/pub.
+
+```
+#0      _getExecutable (package:process/src/interface/local_process_manager.dart:125:5)
+#1      LocalProcessManager.start (package:process/src/interface/local_process_manager.dart:41:30)
+#2      ErrorHandlingProcessManager.start.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:462:33)
+#3      _run (package:flutter_tools/src/base/error_handling_io.dart:356:20)
+#4      ErrorHandlingProcessManager.start (package:flutter_tools/src/base/error_handling_io.dart:462:12)
+#5      _DefaultProcessUtils.start (package:flutter_tools/src/base/process.dart:477:28)
+#6      _DefaultProcessUtils.stream (package:flutter_tools/src/base/process.dart:496:35)
+#7      _DefaultPub.batch (package:flutter_tools/src/dart/pub.dart:295:34)
+<asynchronous suspension>
+#8      _DefaultPub.get (package:flutter_tools/src/dart/pub.dart:219:15)
+#9      PackagesGetCommand._runPubGet (package:flutter_tools/src/commands/packages.dart:117:17)
+#10     PackagesGetCommand.runCommand (package:flutter_tools/src/commands/packages.dart:151:11)
+#11     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:977:18)
+#12     _rootRunUnary (dart:async/zone.dart:1198:47)
+#13     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#14     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#15     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#16     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#17     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#18     Future._asyncCompleteWithValue.<anonymous closure> (dart:async/future_impl.dart:567:7)
+#19     _rootRun (dart:async/zone.dart:1190:13)
+#20     _CustomZone.run (dart:async/zone.dart:1093:19)
+#21     _CustomZone.runGuarded (dart:async/zone.dart:997:7)
+#22     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1037:23)
+#23     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#24     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#25     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#26     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel unknown, 1.22.6, on macOS 11.5.1 20G80 darwin-arm, locale en-ID)
+    • Flutter version 1.22.6 at /Users/neuron-nb127/development/flutter
+    • Framework revision 9b2d32b605 (5 months ago), 2021-05-14 19:12:57 -0700
+    • Engine revision a9d88a4d18
+    • Dart version 2.10.5
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
+    • Android SDK at /Users/neuron-nb127/Library/Android/sdk
+    • Platform android-30, build-tools 30.0.3
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6915495)
+    • All Android licenses accepted.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 13.0)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 13.0, Build version 13A233
+    • CocoaPods version 1.10.1
+
+[✓] Android Studio (version 4.1)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin installed
+    • Dart plugin version 201.9380
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6915495)
+
+[✓] Connected device (1 available)
+    • RMX2001 (mobile) • JFCMMBQ87H7HVOMR • android-arm64 • Android 11 (API 30)
+
+• No issues found!
+```
